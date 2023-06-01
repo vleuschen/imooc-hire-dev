@@ -1,0 +1,22 @@
+server:
+  port: 7001
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1
+# 多环境配置
+spring:
+  profiles:
+    active: dev
+  banner:
+    image:
+      location: banner.txt
+logging:
+  level:
+    root: info
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml #xml文件加载路径
+  global-config:
+    db-config:
+      id-type: assign_id
+    banner: false
